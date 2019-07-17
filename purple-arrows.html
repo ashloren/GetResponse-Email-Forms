@@ -1,0 +1,29 @@
+<style type="text/css">
+
+
+form,label {width:250px;font-family: 'Poppins', sans-serif;font-size:12pt;text-align:center;}
+h1.sidebar {width:250px;font-family: 'Poppins', sans-serif;font-size:12pt;text-align:center;color:#820BBB;}
+input.text {font-family: 'Poppins', sans-serif;font-size:14pt;height:25px;width:200px;text-align:left;}
+input.download {width:189px;height:35px;text-align:center;}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
+<h1 class="sidebar">Your Headline Goes Here</h1>
+<br>
+<img src="/GetResponse-Forms/Images/down-arrows.png" width="250" height="107">
+<label>
+	<!-- Email field (required) -->
+	Email:</label><br> <input type="text" class="text" name="email"/><br/><br>
+	<!-- Campaign token -->
+	<!-- Get the token at: https://app.getresponse.com/campaign_list.html -->
+	<input type="hidden" name="campaign_token" value="###" />
+	<!-- Thank you page (optional) -->
+	<input type="hidden" name="thankyou_url" value="#"/>
+	<!-- Add subscriber to the follow-up sequence with a specified day (optional) -->
+	<input type="hidden" name="start_day" value="0" />
+	<!-- Forward form data to your page (optional) -->
+	<input type="hidden" name="forward_data" value="" />
+	<!-- Subscriber button -->
+	<input type="image" class="download" src="/GetResponse-Forms/Images/Buttons/download-purple.png" alt="Subscribe"/>
+</form>
