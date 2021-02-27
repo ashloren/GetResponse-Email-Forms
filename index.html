@@ -1,6 +1,42 @@
+<script type="text/javascript">
+document.getElementById('copyToClipboard-a').addEventListener('click', function() {
+  
+  var text = document.getElementById('textA');
+  text.select();
+  document.execCommand('copy');
+
+})
+
+</script>
+
 <style type="text/css">
+.text-wrap {
+  position: relative;
 
+  padding: 2em;
+}
 
+textarea {
+  min-width: 20vw;
+  max-width: 80vw;
+  min-height: 200px;
+  max-height: 80vh;
+  padding: 0.8em 1em;
+  font-size: 1em;
+  
+}
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+textarea::-webkit-scrollbar-track {
+    background: #ccc; 
+}
+textarea::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
 #cooking {width:250px;height:350px;background-image:url('https://raw.githubusercontent.com/ashloren/GetResponse-Email-Forms/master/images/cooking.png');font-family: 'Poppins', sans-serif;font-size:12pt;text-align:center;}
 #light {position:relative;top: 100px;width:230px;font-family: 'Poppins', sans-serif;font-size:12pt;text-align:center;color:#fff;padding-right:10px;padding-left:10px;}
 input.text {position:relative;top:80px;font-family: 'Poppins', sans-serif;font-size:14pt;height:25px;width:200px;text-align:left;}
@@ -11,10 +47,7 @@ img {}
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
 <form id="cooking" action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
-
-<br>
-<br>
-<br>
+<br><br><br>
 <h1 id="light">Your Headline Goes Here</h1>
 <br>
 <label id="white">
@@ -32,6 +65,38 @@ img {}
 	<!-- Subscriber button -->
 	<input type="image" class="download" src="https://raw.githubusercontent.com/ashloren/GetResponse-Email-Forms/master/images/buttons/send-ebook-red.png" width="" alt="Subscribe"/><br>
 </form>
+<div class="text-wrap">
+  <textarea id="textA"><style type="text/css">
+#cooking {width:250px;height:350px;background-image:url('https://raw.githubusercontent.com/ashloren/GetResponse-Email-Forms/master/images/cooking.png');font-family: 'Poppins', sans-serif;font-size:12pt;text-align:center;}
+#light {position:relative;top: 100px;width:230px;font-family: 'Poppins', sans-serif;font-size:12pt;text-align:center;color:#fff;padding-right:10px;padding-left:10px;}
+input.text {position:relative;top:80px;font-family: 'Poppins', sans-serif;font-size:14pt;height:25px;width:200px;text-align:left;}
+input.download {position:relative;top:80px;width:191px;height:;text-align:center;padding-bottom:10px;padding-top:15px;}
+#white {position:relative;top:70px;font-family: 'Poppins', sans-serif;font-size:12pt;text-align:center;padding-top:10px;color:#fff;}
+img {}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+<form id="cooking" action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
+<br><br><br>
+<h1 id="light">Your Headline Goes Here</h1>
+<br>
+<label id="white">
+	<!-- Email field (required) -->
+	Email:</label><br> <input type="text" class="text" name="email"/><br/>
+	<!-- Campaign token -->
+	<!-- Get the token at: https://app.getresponse.com/campaign_list.html -->
+	<input type="hidden" name="campaign_token" value="###" />
+	<!-- Thank you page (optional) -->
+	<input type="hidden" name="thankyou_url" value="#"/>
+	<!-- Add subscriber to the follow-up sequence with a specified day (optional) -->
+	<input type="hidden" name="start_day" value="0" />
+	<!-- Forward form data to your page (optional) -->
+	<input type="hidden" name="forward_data" value="" />
+	<!-- Subscriber button -->
+	<input type="image" class="download" src="https://raw.githubusercontent.com/ashloren/GetResponse-Email-Forms/master/images/buttons/send-ebook-red.png" width="" alt="Subscribe"/><br>
+</form></textarea>
+  <div id="copyToClipboard-a" class="clipboard icon"></div>
+</div>
 
 
 <style type="text/css">
